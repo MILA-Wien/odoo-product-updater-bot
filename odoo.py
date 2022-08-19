@@ -81,6 +81,7 @@ class OdooAPI:
         r = self.search_read(entity, cond=cond, fields=fields)
         if len(r) > 0:
             return r[0]
+        return None
 
     def write(self, entity, ids, fields):
         return self._models.execute_kw(
